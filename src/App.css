@@ -1,38 +1,69 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: beige;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  
+}
+
+.board {
+  width: 60vh;
+  height: 60vh;
+  background-color: darkkhaki;
+  border: 1px solid gray;
+  display: grid;
+  grid-template: "a a a" auto;
+  padding: 30px;
+}
+
+.square > p {
+  margin: 0px;
+  position: absolute;
+}
+
+.square {
+  font-size: 5em;
+  border: 2px solid black;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: whitesmoke;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-self: center;
+  justify-self: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable */
+
+.square:hover{
+  background-color: var(--playercolor);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+  border: 0px;
+  width: 20%;
+  height: 6%;
+  border-radius: 20px;
+  background-color: purple;
+  margin-top: 32px;
+  color:aliceblue
 }
